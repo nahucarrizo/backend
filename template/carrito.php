@@ -57,6 +57,6 @@
     <!-- footer -->
     <?php include ('php/footer.php') ?>
     <div class="fluid-container img-footer"></div>
-    <?php include('php.scripts.php') ?>
+    <?php include('php/scripts.php') ?>
 </body>
 </html>

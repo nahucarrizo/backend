@@ -50,7 +50,7 @@
   <!-- Contacto-->
   <?php 
     include ('php/footer.php'); 
-    include('php.scripts.php');
+    include('php/scripts.php');
   ?>
   
 </body>

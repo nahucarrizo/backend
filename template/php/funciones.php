@@ -12,4 +12,13 @@
         ];
         return ($productos);
     }
+
+    function conectar(){
+        $server = "127.0.0.1";
+        $user = "root";
+        $pass = "";
+        $bd = "curso_backend";
+        $con = mysqli_connect($server, $user, $pass, $bd) or die ("Error al conectar la base de datos".mysqli_error());
+        return $con;
+    }
 ?>
