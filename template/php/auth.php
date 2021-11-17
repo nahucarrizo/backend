@@ -9,7 +9,6 @@
     if(mysqli_num_rows($result) > 0){
         while($usuario = mysqli_fetch_assoc($result)){
             header("Location: ../index.php");
-            echo "Hola mundo";
         }
     }
     else{
