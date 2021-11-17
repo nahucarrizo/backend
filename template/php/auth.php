@@ -6,10 +6,10 @@
     $conexion = conectar();
     $sql = "SELECT * from usuarios where (('$email' = email) and ('$password' = password))";
     $result = mysqli_query($conexion,$sql);
-    $count = mysqli_num_rows($result);
-    if($count == 1) {
-        $_SESSION['userename'] = $email;
-        header("Location: ../index.php");
+    if(mysqli_num_rows($result) > 0){
+        while($usuario = mysqli_fetch_assoc($result)){
+            header("Location: ../index.php");
+        }
     }
     else{
         echo "Usuario o clave incorrecta";
