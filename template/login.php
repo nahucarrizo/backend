@@ -16,10 +16,10 @@
                   <input type="email" class="form-control mb-4" name="email" placeholder="Email" id="email">
                   <input type="password" class="form-control mb-4" name="password" placeholder="Constraseña" id="password">
                   <button type="submit" class="btn btn-login btn-block">Ingresar</button>
-                  <button type="submit" class="btn btn-login btn-block">
-                    <a href="register.php" class="text-white">Registrarse</a>
-                  </button>
                 </form>
+                <button type="submit" class="btn btn-login btn-block mt-1">
+                    <a href="register.php" class="text-white">Registrarse</a>
+                </button>
             </div>
           </div>
         </div>
@@ -27,7 +27,7 @@
     <!-- footer -->
     <?php 
       include ('php/footer.php'); 
-      include('php/scripts.php');
+      include ('php/scripts.php');
     ?>   
 </body>
 </html>

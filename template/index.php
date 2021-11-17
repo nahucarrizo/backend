@@ -9,7 +9,7 @@
 </head>
 <body id="page-top">
   <!-- Navigation-->
-    <?php include('php/navbar.php') ?>
+  <?php include('php/navbar.php') ?>
   <!-- Masthead-->
   <header class="masthead">
       <div class="container d-flex h-100 align-items-center">
@@ -46,7 +46,7 @@
             <?php endforeach; ?>
           </div>
       </div>
-  </section>
+  </section>  
   <!-- Contacto-->
   <?php 
     include ('php/footer.php'); 
