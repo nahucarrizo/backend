@@ -13,7 +13,7 @@
             <div class="text-left">
                 <h1 class="my-0 txt-black mb-4">login</h1>
                 <form method="POST" action="php/auth.php">
-                  <input type="email" class="form-control mb-4" name="email" placeholder="Email" id="email">
+                  <input type="text" class="form-control mb-4" name="usuario" placeholder="Usuario" id="usuario">
                   <input type="password" class="form-control mb-4" name="password" placeholder="Constraseña" id="password">
                   <button type="submit" class="btn btn-login btn-block">Ingresar</button>
                 </form>
