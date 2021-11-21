@@ -21,4 +21,8 @@
         $con = mysqli_connect($server, $user, $pass, $bd) or die ("Error al conectar la base de datos".mysqli_error());
         return $con;
     }
+
+    function traerCarrito(){
+        $conexion = conectar();
+    }
 ?>
