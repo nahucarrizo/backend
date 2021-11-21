@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-11-2021 a las 05:23:45
+-- Tiempo de generación: 21-11-2021 a las 20:44:02
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -31,8 +31,23 @@ CREATE TABLE `productos` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `precio` int(11) NOT NULL,
-  `imagen` varchar(150) NOT NULL
+  `imagen` varchar(150) NOT NULL,
+  `stock` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id`, `nombre`, `precio`, `imagen`, `stock`) VALUES
+(1, 'Papas fritas', 100, 'img/papas-fritas.png', 10),
+(2, 'Ensalada', 300, 'img/ensalada.png', 10),
+(3, 'Pizza', 500, 'img/pizza.png', 20),
+(4, 'Sandwich', 300, 'img/sandwich.png', 15),
+(5, 'Hamburguesa', 350, 'img/hamburguesa.png', 8),
+(6, 'Galletitas', 200, 'img/galletitas.png', 14),
+(7, 'Pancho', 200, 'img/pancho.png', 20),
+(8, 'Dona', 100, 'img/dona.png', 20);
 
 -- --------------------------------------------------------
 
@@ -80,7 +95,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
