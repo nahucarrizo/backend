@@ -40,7 +40,7 @@
                 <img src="<?php echo $producto['imagen'] ?>" />
                 <h4 class="text-left"><?php echo $producto['nombre'] ?></h4>
                 <h5 class="text-left">$<?php echo $producto['precio'] ?></h5>
-                <button class="btn btn-agregar">Agregar</button>
+                <button class="btn btn-agregar" data-id="<?php echo $producto['id']; ?>" data-nombre="<?php echo $producto['nombre']; ?>" data-precio="<?php echo $producto['precio']; ?>" data-imagen="<?php echo $producto['imagen']; ?>">Agregar</button>
               </div>
             </div>
             <?php endforeach; ?>
@@ -52,6 +52,5 @@
     include ('php/footer.php'); 
     include('php/scripts.php');
   ?>
-  
 </body>
 </html>
