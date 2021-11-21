@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-10-2021 a las 05:15:10
+-- Tiempo de generación: 21-11-2021 a las 05:23:45
 -- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 7.4.24
+-- Versión de PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,18 +41,19 @@ CREATE TABLE `productos` (
 --
 
 CREATE TABLE `usuarios` (
+  `usuario` varchar(20) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `apellido` varchar(30) NOT NULL,
   `email` varchar(20) NOT NULL,
-  `password` int(11) NOT NULL
+  `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`nombre`, `apellido`, `email`, `password`) VALUES
-('Pepe', 'Alfonso', 'pepe@gmail.com', 123);
+INSERT INTO `usuarios` (`usuario`, `nombre`, `apellido`, `email`, `password`) VALUES
+('nahuedlp', 'Gonzalo Nahuel', 'Carrizo', 'nahuelc37@gmail.com', 'nahuy1996');
 
 --
 -- Índices para tablas volcadas
@@ -68,7 +69,8 @@ ALTER TABLE `productos`
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`email`);
+  ADD PRIMARY KEY (`usuario`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
