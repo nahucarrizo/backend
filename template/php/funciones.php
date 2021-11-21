@@ -1,14 +1,14 @@
 <?php
     function mostrarProductos(){
         $productos = [
-            ['nombre' => 'Papas Fritas', 'precio' => 100, 'imagen' => 'img/papas-fritas.png'],
-            ['nombre' => 'Ensalada', 'precio' => 300, 'imagen' => 'img/ensalada.png'],
-            ['nombre' => 'Pizza', 'precio' => 500, 'imagen' => 'img/pizza.png'],
-            ['nombre' => 'Sandwich', 'precio' => 300, 'imagen' => 'img/sandwich.png'],
-            ['nombre' => 'Hamburguesa', 'precio' => 350, 'imagen' => 'img/hamburguesa.png'],
-            ['nombre' => 'Galletitas', 'precio' => 200, 'imagen' => 'img/galletitas.png'],
-            ['nombre' => 'Pancho', 'precio' => 200, 'imagen' => 'img/pancho.png'],
-            ['nombre' => 'Donas', 'precio' => 100, 'imagen' => 'img/dona.png'],
+            ['id' => 1, 'nombre' => 'Papas Fritas', 'precio' => 100, 'imagen' => 'img/papas-fritas.png'],
+            ['id' => 2, 'nombre' => 'Ensalada', 'precio' => 300, 'imagen' => 'img/ensalada.png'],
+            ['id' => 3, 'nombre' => 'Pizza', 'precio' => 500, 'imagen' => 'img/pizza.png'],
+            ['id' => 4, 'nombre' => 'Sandwich', 'precio' => 300, 'imagen' => 'img/sandwich.png'],
+            ['id' => 5, 'nombre' => 'Hamburguesa', 'precio' => 350, 'imagen' => 'img/hamburguesa.png'],
+            ['id' => 6, 'nombre' => 'Galletitas', 'precio' => 200, 'imagen' => 'img/galletitas.png'],
+            ['id' => 7, 'nombre' => 'Pancho', 'precio' => 200, 'imagen' => 'img/pancho.png'],
+            ['id' => 8, 'nombre' => 'Donas', 'precio' => 100, 'imagen' => 'img/dona.png'],
         ];
         return ($productos);
     }
@@ -24,5 +24,6 @@
 
     function traerCarrito(){
         $conexion = conectar();
+
     }
 ?>
