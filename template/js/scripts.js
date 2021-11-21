@@ -54,3 +54,7 @@
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
+
+$(".btn-agregar").click(function(){
+    console.log("Soy una " + $(this).attr("data-nombre") + " y salgo " + $(this).attr("data-precio"));
+});
