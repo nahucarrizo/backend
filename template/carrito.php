@@ -21,7 +21,6 @@
           <table class="table">
             <thead>
               <tr>
-                <th class="col-1"></th>
                 <th class="col-6 text-left">producto</th>
                 <th class="col-1 text-center">cantidad</th>
                 <th class="col-2 text-center">precio</th>
@@ -29,10 +28,16 @@
               </tr>
             </thead>
             <tbody>
-              <?php foreach($carrito as $item){ ?>
+            <?php foreach($carrito as $item): ?>
               <tr>
+                <td class="align-middle text-left"><?php echo $item['nombre'];?></td>
+                <td class="align-middle text-center">
+                  <input type="number" class="form-control" id="cantidad" placeholder="01">
+                </td>
+                <td class="align-middle text-center"><span id="precio"><?php echo $item['precio'];?></span></td>
+                <td class="align-middle text-center">$<span id="subtotal"><?php echo $item['precio'];?></span></td>
               </tr>
-              <?php } ?>
+              <?php endforeach; ?>
             </tbody>
           </table>
         </div>

@@ -35,14 +35,16 @@
           </div>
           <div class="row align-items-end">
             <?php foreach($productos as $producto): ?>
-            <div class="col-xl-3 col-6 mt-4">
-              <div class="producto text-center p-4">
-                <img src="<?php echo $producto['imagen'] ?>" />
-                <h4 class="text-left"><?php echo $producto['nombre'] ?></h4>
-                <h5 class="text-left">$<?php echo $producto['precio'] ?></h5>
-                <button class="btn btn-agregar" data-id="<?php echo $producto['id']; ?>" data-nombre="<?php echo $producto['nombre']; ?>" data-precio="<?php echo $producto['precio']; ?>" data-imagen="<?php echo $producto['imagen']; ?>">Agregar</button>
+              <div class="col-xl-3 col-6 mt-4">
+                <div class="producto text-center p-4">
+                  <img src="<?php echo $producto['imagen'] ?>" />
+                  <h4 class="text-left"><?php echo $producto['nombre'] ?></h4>
+                  <h5 class="text-left">$<?php echo $producto['precio'] ?></h5>
+                  <?php if (isset($_SESSION['usuario'])) { ?>
+                    <button class="btn btn-agregar" data-id="<?php echo $producto['id']; ?>" data-nombre="<?php echo $producto['nombre']; ?>" data-precio="<?php echo $producto['precio']; ?>" data-imagen="<?php echo $producto['imagen']; ?>" data-id-usuario="<?php echo $_SESSION['usuario']; ?>">Agregar</button>
+                  <?php } ?>
+                </div>
               </div>
-            </div>
             <?php endforeach; ?>
           </div>
       </div>

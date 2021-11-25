@@ -24,6 +24,16 @@
 
     function traerCarrito(){
         $conexion = conectar();
-
+        $sql = "SELECT * FROM carritos";
+        $result = mysqli_query($conexion, $sql);
+        if(mysqli_num_rows($result) > 0){
+            while($row = mysqli_fetch_assoc($result)){
+                $carrito[] = $row;
+            }
+        }
+        else{
+            echo "Carrito vacio";
+        }
+        return $carrito;
     }
 ?>

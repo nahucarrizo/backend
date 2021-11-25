@@ -56,5 +56,26 @@
 })(jQuery); // End of use strict
 
 $(".btn-agregar").click(function(){
-    console.log("Soy una " + $(this).attr("data-nombre") + " y salgo " + $(this).attr("data-precio"));
-});
+    var id = $(this).attr("data-id");
+    var idUsuario = $(this).attr("data-id-usuario");
+    var nombre = $(this).attr("data-nombre");
+    var precio = $(this).attr("data-precio");
+    var imagen = $(this).attr("data-imagen");
+    console.log(id, idUsuario);
+    $.post ("php/agregarCarrito.php" , {
+        id: id,
+        idUsuario: idUsuario,
+        nombre: nombre,
+        precio: precio,
+        imagen: imagen
+    }, function(result){
+        alert("Producto insertado");
+    });
+})
+
+$("#cantidad").change(function(){
+    var cantidad = $(this).val();
+    var precio = $("#precio").text();
+    var subtotal = cantidad * precio;
+    $("#subtotal").text(subtotal);
+  })
